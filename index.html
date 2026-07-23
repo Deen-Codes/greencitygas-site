@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Green City Gas | Gas Safe Plumbing &amp; Heating Engineers — Milton Keynes</title>
 <meta name="description" content="Green City Gas — Gas Safe registered plumbing and heating engineers in Milton Keynes. Boiler installs & repairs, central heating, gas safety certificates and general plumbing.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230f7a4d'/><path d='M12 5S7.5 10 7.5 13.5a4.5 4.5 0 0 0 9 0C16.5 10 12 5 12 5Z' fill='%23ffffff'/><path d='M12 10c1 1.6 2.6 2.2 2.6 4a2.6 2.6 0 0 1-5.2 0c0-.9.5-1.4 1-1.9.3.7.9.8 1.2.4-.4-.9 0-1.9.4-2.5Z' fill='%23D8201F'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'><rect width='120' height='120' rx='26' fill='%23ffffff'/><g transform='translate(10,6)'><path d='M50 8 C 40 34 18 56 18 84 a 32 32 0 0 0 64 0 C 82 56 60 34 50 8 Z' fill='%232E9E44'/><path d='M50 22 C 42 44 27 60 27 84 a 23 23 0 0 0 46 0 C 73 60 58 44 50 22 Z' fill='%23ffffff'/><path d='M50 30 C 44 48 33 62 33 84 a 17 17 0 0 0 34 0 C 67 62 56 48 50 30 Z' fill='%23D8201F'/><path d='M50 60 C 46 70 35 78 35 90 a 15 15 0 0 0 30 0 C 65 78 54 70 50 60 Z' fill='%23ffffff'/><path d='M50 64 C 47 73 38 80 38 90 a 12 12 0 0 0 24 0 C 62 80 53 73 50 64 Z' fill='%232F7FE0'/></g></svg>">
 <style>
   :root{
     --green:#0f7a4d;
@@ -54,13 +54,18 @@
   .nav-links a:hover{color:var(--green-dark)}
   .nav-cta{display:flex;align-items:center;gap:.8rem}
   .phone-top{font-weight:800;color:var(--green-dark);white-space:nowrap}
-  .gs-badge{display:none;flex-direction:column;align-items:center;line-height:1.02;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0a5a39;border:2px solid #0a5a39;border-radius:9px;padding:.34rem .6rem}
-  .gs-badge strong{font-size:.72rem;font-weight:900}
-  @media(min-width:861px){.gs-badge{display:flex}}
+  .creds{display:flex;align-items:center;gap:10px}
+  .cred-logo{height:44px;width:auto;display:block;border-radius:5px}
+  @media(max-width:860px){.creds{gap:7px}.cred-logo{height:30px}}
+  .brands{background:#f7fbf8;padding:2.2rem 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .brands-title{text-align:center;color:var(--muted);font-weight:700;font-size:.92rem;letter-spacing:.02em;margin-bottom:1.4rem}
+  .brand-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.4rem 2.6rem}
+  .brand-row img{height:42px;width:auto;object-fit:contain}
+  @media(max-width:860px){.brand-row{gap:1.1rem 1.8rem}.brand-row img{height:30px}}
   @media(max-width:860px){.nav-links{display:none}.phone-top{display:none}.nav-cta .btn{display:none}.hero-cta{display:none}.hero-note{margin-top:0}}
 
   /* Hero */
-  .hero{position:relative;background:linear-gradient(180deg, rgba(9,32,21,.7) 0%, rgba(9,32,21,.3) 45%, rgba(9,32,21,.4) 100%), url('hero-vans.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover;padding:1.2rem 0 0;min-height:74vw}
+  .hero{position:relative;background:linear-gradient(180deg, rgba(9,32,21,.66) 0%, rgba(9,32,21,.12) 20%, rgba(9,32,21,0) 32%), linear-gradient(0deg, rgba(9,32,21,.85) 0%, rgba(9,32,21,.16) 22%, rgba(9,32,21,0) 34%), url('hero-vans.jpg');background-repeat:no-repeat;background-position:top center,bottom center,top center;background-size:100% 100%,100% 100%,100% auto;min-height:56.4vw;padding:0}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:1.8rem}}
   .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);font-weight:700;font-size:.85rem;padding:.4rem .8rem;border-radius:999px;margin-bottom:1rem}
@@ -153,9 +158,9 @@
   .ph{background:#fff6df;color:#7a5a00;padding:0 .25em;border-radius:4px;border:1px dashed #e0b74a;font-style:normal}
 
   /* sticky mobile call bar */
-  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.6rem;background:rgba(223,242,232,.55);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border-top:1px solid rgba(15,122,77,.18);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+  .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.6rem;background:rgba(13,84,54,.42);backdrop-filter:blur(18px) saturate(1.5);-webkit-backdrop-filter:blur(18px) saturate(1.5);border-top:1px solid rgba(255,255,255,.14);box-shadow:0 -6px 22px rgba(0,0,0,.16)}
   .callbar .btn{flex:1;justify-content:center;padding:.7rem}
-  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero h1{font-size:2.4rem;margin-bottom:.6rem}.hero p.lead{font-size:1.12rem;max-width:none;margin-bottom:0}}
+  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero .wrap{position:relative;min-height:56.4vw}.hero h1{position:absolute;top:.5rem;left:0;text-align:left;max-width:82%;font-size:1.6rem;line-height:1.08;margin:0}.hero p.lead{position:absolute;bottom:.5rem;right:0;text-align:right;max-width:86%;font-size:.98rem;margin:0}}
 </style>
 </head>
 <body>
@@ -175,7 +180,11 @@
     </nav>
     <div class="nav-cta">
       <a href="tel:+447346813714" class="phone-top"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>07346 813714</a>
-      <span class="gs-badge">Gas&nbsp;Safe<strong>Registered</strong></span>
+      <div class="creds">
+        <img class="cred-logo" src="vaillant-logo.png" alt="Vaillant boiler installer">
+        <img class="cred-logo" src="ideal-logo.jpg" alt="Ideal boiler installer">
+        <img class="cred-logo" src="gas-safe-logo.png" alt="Gas Safe Register — registered engineers">
+      </div>
     </div>
   </div>
 </header>
@@ -214,7 +223,7 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <div class="kicker">What we do</div>
+      <div class="kicker">Our services</div>
       <h2>Plumbing &amp; heating, sorted</h2>
       <p>From a dripping tap to a full boiler install, we cover the lot — safely and to Gas Safe standards.</p>
     </div>
@@ -239,6 +248,20 @@
         <h3>Plumbing</h3>
         <p>Leaks, taps, toilets, bathrooms and everyday plumbing jobs — no job too small.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOILER BRANDS -->
+<section class="brands">
+  <div class="wrap">
+    <p class="brands-title">The boiler brands we install &amp; service</p>
+    <div class="brand-row">
+      <img src="worcester-bosch.png" alt="Worcester Bosch">
+      <img src="vaillant-logo.png" alt="Vaillant">
+      <img src="viessmann-logo.png" alt="Viessmann">
+      <img src="ideal-logo.jpg" alt="Ideal">
+      <img src="baxi-logo.png" alt="Baxi">
     </div>
   </div>
 </section>
