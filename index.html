@@ -40,6 +40,7 @@
   .btn-whatsapp{background:#25d366;color:#fff}
   .btn-whatsapp:hover{background:#1db855}
   .wa-svg{width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.25em}
+  .ph-svg{width:1.05em;height:1.05em;vertical-align:-.14em;margin-right:.4em}
 
   /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -55,10 +56,7 @@
   @media(max-width:860px){.nav-links{display:none}.phone-top{display:none}.nav-cta .btn{display:none}.hero-cta{display:none}.hero-note{margin-top:0}}
 
   /* Hero */
-  .hero{position:relative;
-    background:linear-gradient(105deg, rgba(9,32,21,.82) 0%, rgba(9,32,21,.5) 46%, rgba(9,32,21,.12) 82%), url('hero-vans.jpg') center/cover no-repeat;
-    min-height:88vh;display:flex;align-items:center;
-    padding:clamp(2rem,6vw,4rem) 0}
+  .hero{position:relative;background:linear-gradient(180deg,#ffffff,#f2f8f4);padding:1.3rem 0 .4rem}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:1.8rem}}
   .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);font-weight:700;font-size:.85rem;padding:.4rem .8rem;border-radius:999px;margin-bottom:1rem}
@@ -69,11 +67,15 @@
   .hero-note{font-size:.9rem;color:var(--muted)}
   .hero-text{max-width:780px}
   .hero-text{max-width:600px}
-  .hero h1{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.45)}
-  .hero h1 span{color:#8fe6b4}
-  .hero p.lead{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.6)}
-  .hero-note{color:rgba(255,255,255,.92);text-shadow:0 1px 8px rgba(0,0,0,.55)}
-  .hero .eyebrow{background:rgba(255,255,255,.16);color:#eafaf1}
+  .hero-img{display:block;width:100%;height:auto;margin-top:1.3rem;border-radius:14px;box-shadow:var(--shadow)}
+  @media(min-width:861px){
+    .hero{background:linear-gradient(105deg, rgba(9,32,21,.82) 0%, rgba(9,32,21,.5) 46%, rgba(9,32,21,.12) 82%), url('hero-vans.jpg') center/cover no-repeat;min-height:88vh;display:flex;align-items:center;padding:0}
+    .hero h1{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.45)}
+    .hero h1 span{color:#8fe6b4}
+    .hero p.lead{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+    .hero .eyebrow{background:rgba(255,255,255,.16);color:#eafaf1}
+    .hero-img{display:none}
+  }
   .hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem}
   .hero-card h3{font-size:1.05rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
   .tick-list{list-style:none;display:grid;gap:.7rem}
@@ -81,10 +83,12 @@
   .tick{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--green-light);color:var(--green-dark);display:grid;place-items:center;font-size:.75rem;margin-top:2px}
 
   /* Trust bar */
-  .trust{background:var(--green-dark);color:#dff2e8}
-  .trust .wrap{display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:space-between;padding:1rem 0;font-weight:600;font-size:.95rem}
-  .trust span{display:flex;align-items:center;gap:.55rem}
-  .trust svg{width:20px;height:20px;flex:0 0 20px}
+  .trust{background:var(--green-dark);color:#eafaf1;overflow:hidden}
+  .marquee-track{display:flex;align-items:center;width:max-content;padding:.85rem 0;animation:marquee 26s linear infinite}
+  .marquee-track span{display:inline-flex;align-items:center;gap:.55rem;font-weight:600;font-size:.95rem;margin-right:2.6rem;white-space:nowrap}
+  .marquee-track svg{width:20px;height:20px;flex:0 0 20px}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .trust:hover .marquee-track{animation-play-state:paused}
 
   /* Sections */
   section{padding:clamp(3rem,7vw,5rem) 0}
@@ -149,7 +153,7 @@
   /* sticky mobile call bar */
   .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.6rem;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.06)}
   .callbar .btn{flex:1;justify-content:center;padding:.7rem}
-  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero-note{margin-top:0}}
+  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero h1{font-size:2rem}}
 </style>
 </head>
 <body>
@@ -168,7 +172,7 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a href="tel:+447346813714" class="phone-top">📞 07346 813714</a>
+      <a href="tel:+447346813714" class="phone-top"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>07346 813714</a>
     </div>
   </div>
 </header>
@@ -180,22 +184,27 @@
     <div class="hero-text">
       <span class="eyebrow">Gas Safe Registered Engineers</span>
       <h1>Trusted plumbing &amp; <span>heating</span> engineers in Milton Keynes</h1>
-      <p class="lead">Boilers, central heating, gas safety certificates and general plumbing — done right, on time, at a fair price.</p>
+      <p class="lead">Boilers, central heating, gas safety certificates and plumbing — done right, on time, at a fair price.</p>
       <div class="hero-cta">
-        <a href="tel:+447346813714" class="btn btn-primary">📞 Call 07346 813714</a>
+        <a href="tel:+447346813714" class="btn btn-primary"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>Call 07346 813714</a>
         <a href="https://wa.me/447346813714?text=Hi%20Green%20City%20Gas%2C%20I%27d%20like%20to%20get%20a%20quote" class="btn btn-whatsapp" target="_blank" rel="noopener"><svg class="wa-svg" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.6 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3Zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.2-.4a10.2 10.2 0 0 1-1.6-5.5c0-5.7 4.7-10.4 10.5-10.4 5.8 0 10.4 4.7 10.4 10.4 0 5.8-4.7 10.5-10.4 10.5Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>WhatsApp us</a>
       </div>
-      <p class="hero-note">Family-run · Local &amp; reliable · Fully Gas Safe registered</p>
     </div>
+    <img class="hero-img" src="hero-vans.jpg" alt="Green City Gas van fleet — VW ID. Buzz, VW Caddy and Mercedes Sprinter" width="1672" height="941">
   </div>
 </section>
 
 <!-- TRUST BAR -->
 <div class="trust">
-  <div class="wrap">
+  <div class="marquee-track">
     <span><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg> Gas Safe Registered</span>
     <span><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Milton Keynes &amp; surrounding areas</span>
     <span><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg> Family-run business</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Local &amp; reliable</span>
+    <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg> Gas Safe Registered</span>
+    <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Milton Keynes &amp; surrounding areas</span>
+    <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5"/><path d="M9.5 21v-6h5v6"/></svg> Family-run business</span>
+    <span aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#7fe3ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Local &amp; reliable</span>
   </div>
 </div>
 
@@ -225,7 +234,7 @@
       </div>
       <div class="card">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#0f7a4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>General Plumbing</h3>
+        <h3>Plumbing</h3>
         <p>Leaks, taps, toilets, bathrooms and everyday plumbing jobs — no job too small.</p>
       </div>
     </div>
@@ -300,7 +309,7 @@
           <div>Hours<small>Mon–Fri 8am–6pm · Sat by arrangement</small></div>
         </div>
         <div class="contact-cta">
-          <a href="tel:+447346813714" class="btn btn-primary">📞 Call now</a>
+          <a href="tel:+447346813714" class="btn btn-primary"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>Call now</a>
           <a href="https://wa.me/447346813714?text=Hi%20Green%20City%20Gas%2C%20I%27d%20like%20to%20get%20a%20quote" class="btn btn-whatsapp" target="_blank" rel="noopener"><svg class="wa-svg" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.6 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3Zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.2-.4a10.2 10.2 0 0 1-1.6-5.5c0-5.7 4.7-10.4 10.5-10.4 5.8 0 10.4 4.7 10.4 10.4 0 5.8-4.7 10.5-10.4 10.5Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>WhatsApp us</a>
         </div>
       </div>
@@ -333,7 +342,7 @@
 
 <!-- MOBILE CALL BAR -->
 <div class="callbar">
-  <a href="tel:+447346813714" class="btn btn-primary">📞 Call now</a>
+  <a href="tel:+447346813714" class="btn btn-primary"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>Call now</a>
   <a href="https://wa.me/447346813714?text=Hi%20Green%20City%20Gas%2C%20I%27d%20like%20to%20get%20a%20quote" class="btn btn-whatsapp" target="_blank" rel="noopener"><svg class="wa-svg" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.6 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6.1 1.6 6.9 0 12.5-5.6 12.5-12.5S22.9 3 16 3Zm0 22.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.1 1.1 1.1-4-.2-.4a10.2 10.2 0 0 1-1.6-5.5c0-5.7 4.7-10.4 10.5-10.4 5.8 0 10.4 4.7 10.4 10.4 0 5.8-4.7 10.5-10.4 10.5Zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z"/></svg>WhatsApp us</a>
 </div>
 
