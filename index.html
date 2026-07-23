@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Green City Gas | Gas Safe Plumbing &amp; Heating Engineers — Milton Keynes</title>
 <meta name="description" content="Green City Gas — Gas Safe registered plumbing and heating engineers in Milton Keynes. Boiler installs & repairs, central heating, gas safety certificates and general plumbing.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230f7a4d'/><path d='M12 5S7.5 10 7.5 13.5a4.5 4.5 0 0 0 9 0C16.5 10 12 5 12 5Z' fill='%23ffffff'/><path d='M12 10c1 1.6 2.6 2.2 2.6 4a2.6 2.6 0 0 1-5.2 0c0-.9.5-1.4 1-1.9.3.7.9.8 1.2.4-.4-.9 0-1.9.4-2.5Z' fill='%23ff5a3c'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%230f7a4d'/><path d='M12 5S7.5 10 7.5 13.5a4.5 4.5 0 0 0 9 0C16.5 10 12 5 12 5Z' fill='%23ffffff'/><path d='M12 10c1 1.6 2.6 2.2 2.6 4a2.6 2.6 0 0 1-5.2 0c0-.9.5-1.4 1-1.9.3.7.9.8 1.2.4-.4-.9 0-1.9.4-2.5Z' fill='%23D8201F'/></svg>">
 <style>
   :root{
     --green:#0f7a4d;
@@ -45,8 +45,8 @@
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0;gap:1rem}
   .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
-  .brand .mark{width:38px;height:38px;flex:0 0 38px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--green-dark));display:grid;place-items:center}
-  .brand .mark svg{width:22px;height:22px}
+  .brand .mark{width:42px;height:46px;flex:0 0 42px;display:grid;place-items:center}
+  .brand .mark svg{width:42px;height:46px}
   .brand b{color:var(--green-dark)}
   .nav-links{display:flex;gap:1.4rem;align-items:center;font-weight:600;color:var(--muted)}
   .nav-links a:hover{color:var(--green-dark)}
@@ -55,10 +55,10 @@
   @media(max-width:860px){.nav-links{display:none}.phone-top{display:none}.nav-cta .btn{display:none}.hero-cta{display:none}.hero-note{margin-top:0}}
 
   /* Hero */
-  .hero{position:relative;background:
-      radial-gradient(1200px 500px at 80% -10%,var(--green-light),transparent),
-      linear-gradient(180deg,#fff, #f7fbf8);
-    padding:clamp(2.5rem,6vw,5rem) 0 clamp(2.5rem,5vw,4rem)}
+  .hero{position:relative;
+    background:linear-gradient(105deg, rgba(9,32,21,.82) 0%, rgba(9,32,21,.5) 46%, rgba(9,32,21,.12) 82%), url('hero-vans.jpg') center/cover no-repeat;
+    min-height:88vh;display:flex;align-items:center;
+    padding:clamp(2rem,6vw,4rem) 0}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:1.8rem}}
   .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);font-weight:700;font-size:.85rem;padding:.4rem .8rem;border-radius:999px;margin-bottom:1rem}
@@ -68,17 +68,12 @@
   .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.4rem}
   .hero-note{font-size:.9rem;color:var(--muted)}
   .hero-text{max-width:780px}
-  .hero-img{width:100%;height:auto;display:block;border-radius:20px;box-shadow:var(--shadow);margin-top:2.2rem}
-  @media(min-width:861px){
-    .hero{background:linear-gradient(100deg, rgba(9,32,21,.84) 0%, rgba(9,32,21,.45) 48%, rgba(9,32,21,.06) 80%), url('hero-vans.jpg') center 38%/cover no-repeat;min-height:90vh;display:flex;align-items:center;padding-top:0;padding-bottom:0}
-    .hero-text{max-width:600px}
-    .hero h1{color:#fff}
-    .hero h1 span{color:#8fe6b4}
-    .hero .lead{color:rgba(255,255,255,.92)}
-    .hero-note{color:rgba(255,255,255,.85)}
-    .hero .eyebrow{background:rgba(255,255,255,.15);color:#eafaf1}
-    .hero-img{display:none}
-  }
+  .hero-text{max-width:600px}
+  .hero h1{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.45)}
+  .hero h1 span{color:#8fe6b4}
+  .hero p.lead{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+  .hero-note{color:rgba(255,255,255,.92);text-shadow:0 1px 8px rgba(0,0,0,.55)}
+  .hero .eyebrow{background:rgba(255,255,255,.16);color:#eafaf1}
   .hero-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:1.5rem}
   .hero-card h3{font-size:1.05rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
   .tick-list{list-style:none;display:grid;gap:.7rem}
@@ -143,8 +138,9 @@
   footer{background:var(--ink);color:#c7d3cc;padding:2.5rem 0 1.5rem;font-size:.9rem}
   .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;align-items:flex-start}
   .foot-brand{font-weight:800;font-size:1.2rem;color:#fff;display:flex;align-items:center;gap:.5rem}
-  .foot-brand .mark{width:32px;height:32px;flex:0 0 32px;border-radius:8px;background:linear-gradient(135deg,var(--green),var(--green-dark));display:grid;place-items:center}
-  .foot-brand .mark svg{width:18px;height:18px}
+  .foot-brand .mark{width:34px;height:38px;flex:0 0 34px;display:grid;place-items:center}
+  .foot-brand .mark svg{width:34px;height:38px}
+  .foot-brand b{color:#4fbf80}
   .foot-note{margin-top:1.4rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.12);color:#8fa198;font-size:.82rem;text-align:center}
 
   /* placeholder highlight */
@@ -162,8 +158,8 @@
 <header>
   <div class="wrap nav">
     <a href="#top" class="brand">
-      <span class="mark"><svg viewBox="0 0 24 24"><defs><linearGradient id="flmH" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffb03a"/><stop offset="1" stop-color="#ff5a3c"/></linearGradient></defs><path d="M12 3s-7 8-7 13a7 7 0 0 0 14 0C19 11 12 3 12 3Z" fill="#ffffff"/><path d="M8.5 15a3.5 3.5 0 0 0 3.5 4" fill="none" stroke="#3aa5ff" stroke-width="1.6" stroke-linecap="round"/><path d="M12 9c1.4 2.2 3.6 3 3.6 5.6A3.6 3.6 0 0 1 8.4 15c0-1.2.7-1.9 1.3-2.6.5 1 1.2 1.1 1.7.6-.6-1.2 0-2.7.6-4Z" fill="url(#flmH)"/></svg></span>
-      <span class="brand-name">Green<b>City</b>Gas</span>
+      <span class="mark"><svg viewBox="0 0 100 120"><path d="M50 8 C 40 34 18 56 18 84 a 32 32 0 0 0 64 0 C 82 56 60 34 50 8 Z" fill="#2E9E44"/><path d="M50 22 C 42 44 27 60 27 84 a 23 23 0 0 0 46 0 C 73 60 58 44 50 22 Z" fill="#ffffff"/><path d="M50 30 C 44 48 33 62 33 84 a 17 17 0 0 0 34 0 C 67 62 56 48 50 30 Z" fill="#D8201F"/><path d="M50 60 C 46 70 35 78 35 90 a 15 15 0 0 0 30 0 C 65 78 54 70 50 60 Z" fill="#ffffff"/><path d="M50 64 C 47 73 38 80 38 90 a 12 12 0 0 0 24 0 C 62 80 53 73 50 64 Z" fill="#2F7FE0"/></svg></span>
+      <span class="brand-name">GreenCity<b>Gas</b></span>
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
@@ -191,7 +187,6 @@
       </div>
       <p class="hero-note">Family-run · Local &amp; reliable · Fully Gas Safe registered</p>
     </div>
-    <img class="hero-img" src="hero-vans.jpg" alt="Green City Gas van fleet — VW ID. Buzz, VW Caddy and Mercedes Sprinter" width="1672" height="941">
   </div>
 </section>
 
@@ -318,7 +313,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><span class="mark"><svg viewBox="0 0 24 24"><defs><linearGradient id="flmF" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffb03a"/><stop offset="1" stop-color="#ff5a3c"/></linearGradient></defs><path d="M12 3s-7 8-7 13a7 7 0 0 0 14 0C19 11 12 3 12 3Z" fill="#ffffff"/><path d="M8.5 15a3.5 3.5 0 0 0 3.5 4" fill="none" stroke="#3aa5ff" stroke-width="1.6" stroke-linecap="round"/><path d="M12 9c1.4 2.2 3.6 3 3.6 5.6A3.6 3.6 0 0 1 8.4 15c0-1.2.7-1.9 1.3-2.6.5 1 1.2 1.1 1.7.6-.6-1.2 0-2.7.6-4Z" fill="url(#flmF)"/></svg></span> GreenCityGas</div>
+        <div class="foot-brand"><span class="mark"><svg viewBox="0 0 100 120"><path d="M50 8 C 40 34 18 56 18 84 a 32 32 0 0 0 64 0 C 82 56 60 34 50 8 Z" fill="#2E9E44"/><path d="M50 22 C 42 44 27 60 27 84 a 23 23 0 0 0 46 0 C 73 60 58 44 50 22 Z" fill="#123021"/><path d="M50 30 C 44 48 33 62 33 84 a 17 17 0 0 0 34 0 C 67 62 56 48 50 30 Z" fill="#D8201F"/><path d="M50 60 C 46 70 35 78 35 90 a 15 15 0 0 0 30 0 C 65 78 54 70 50 60 Z" fill="#123021"/><path d="M50 64 C 47 73 38 80 38 90 a 12 12 0 0 0 24 0 C 62 80 53 73 50 64 Z" fill="#2F7FE0"/></svg></span> GreenCity<b>Gas</b></div>
         <p style="margin-top:.6rem;max-width:34ch">Gas Safe registered plumbing &amp; heating in Milton Keynes.</p>
       </div>
       <div>
