@@ -47,8 +47,8 @@
   .nav{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0;gap:1rem}
   .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.25rem;letter-spacing:-.02em}
   .brand .mark{width:42px;height:46px;flex:0 0 42px;display:grid;place-items:center}
-  .brand .mark svg{width:42px;height:46px;transform-box:fill-box;transform-origin:bottom center;animation:flick .55s ease-in-out infinite}
-  @keyframes flick{0%,100%{transform:scaleY(1) skewX(0)}20%{transform:scaleY(1.07) skewX(-2.5deg)}45%{transform:scaleY(.96) skewX(1.5deg)}70%{transform:scaleY(1.05) skewX(-1deg)}}
+  .brand .mark svg{width:42px;height:46px;transform-box:fill-box;transform-origin:bottom center;animation:flick 2.8s ease-in-out infinite}
+  @keyframes flick{0%,100%{transform:scaleY(1) skewX(0)}25%{transform:scaleY(1.03) skewX(-1deg)}55%{transform:scaleY(.99) skewX(.5deg)}80%{transform:scaleY(1.02) skewX(-.4deg)}}
   .brand b{color:var(--green-dark)}
   .nav-links{display:flex;gap:1.4rem;align-items:center;font-weight:600;color:var(--muted)}
   .nav-links a:hover{color:var(--green-dark)}
@@ -57,7 +57,7 @@
   @media(max-width:860px){.nav-links{display:none}.phone-top{display:none}.nav-cta .btn{display:none}.hero-cta{display:none}.hero-note{margin-top:0}}
 
   /* Hero */
-  .hero{position:relative;background:linear-gradient(180deg, rgba(9,32,21,.66) 0%, rgba(9,32,21,.22) 34%, rgba(9,32,21,.28) 56%, #0c2117 100%), url('hero-vans.jpg');background-repeat:no-repeat;background-position:center top;background-size:100% 100%,100% auto;padding:1.3rem 0 1.7rem}
+  .hero{position:relative;background:linear-gradient(180deg, rgba(9,32,21,.7) 0%, rgba(9,32,21,.3) 45%, rgba(9,32,21,.4) 100%), url('hero-vans.jpg');background-repeat:no-repeat;background-position:center center;background-size:cover;padding:1.2rem 0 0;min-height:74vw}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:1.8rem}}
   .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);font-weight:700;font-size:.85rem;padding:.4rem .8rem;border-radius:999px;margin-bottom:1rem}
