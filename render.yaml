@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: greencitygas
+    runtime: static
+    buildCommand: "echo 'no build step - static site'"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
