@@ -54,6 +54,9 @@
   .nav-links a:hover{color:var(--green-dark)}
   .nav-cta{display:flex;align-items:center;gap:.8rem}
   .phone-top{font-weight:800;color:var(--green-dark);white-space:nowrap}
+  .gs-badge{display:none;flex-direction:column;align-items:center;line-height:1.02;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0a5a39;border:2px solid #0a5a39;border-radius:9px;padding:.34rem .6rem}
+  .gs-badge strong{font-size:.72rem;font-weight:900}
+  @media(min-width:861px){.gs-badge{display:flex}}
   @media(max-width:860px){.nav-links{display:none}.phone-top{display:none}.nav-cta .btn{display:none}.hero-cta{display:none}.hero-note{margin-top:0}}
 
   /* Hero */
@@ -152,7 +155,7 @@
   /* sticky mobile call bar */
   .callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;gap:.6rem;padding:.6rem;background:rgba(223,242,232,.55);backdrop-filter:blur(16px) saturate(1.5);-webkit-backdrop-filter:blur(16px) saturate(1.5);border-top:1px solid rgba(15,122,77,.18);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
   .callbar .btn{flex:1;justify-content:center;padding:.7rem}
-  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero h1{font-size:1.7rem;margin-bottom:.55rem}.hero p.lead{font-size:1rem;max-width:none;margin-bottom:0}}
+  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero h1{font-size:2.4rem;margin-bottom:.6rem}.hero p.lead{font-size:1.12rem;max-width:none;margin-bottom:0}}
 </style>
 </head>
 <body>
@@ -172,6 +175,7 @@
     </nav>
     <div class="nav-cta">
       <a href="tel:+447346813714" class="phone-top"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>07346 813714</a>
+      <span class="gs-badge">Gas&nbsp;Safe<strong>Registered</strong></span>
     </div>
   </div>
 </header>
@@ -320,7 +324,7 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="foot-brand"><span class="mark"><svg viewBox="0 0 100 120"><path d="M50 8 C 40 34 18 56 18 84 a 32 32 0 0 0 64 0 C 82 56 60 34 50 8 Z" fill="#2E9E44"/><path d="M50 22 C 42 44 27 60 27 84 a 23 23 0 0 0 46 0 C 73 60 58 44 50 22 Z" fill="#123021"/><path d="M50 30 C 44 48 33 62 33 84 a 17 17 0 0 0 34 0 C 67 62 56 48 50 30 Z" fill="#D8201F"/><path d="M50 60 C 46 70 35 78 35 90 a 15 15 0 0 0 30 0 C 65 78 54 70 50 60 Z" fill="#123021"/><path d="M50 64 C 47 73 38 80 38 90 a 12 12 0 0 0 24 0 C 62 80 53 73 50 64 Z" fill="#2F7FE0"/></svg></span> GreenCity<b>Gas</b></div>
+        <div class="foot-brand"><span class="mark"><svg viewBox="0 0 100 120"><path d="M50 8 C 40 34 18 56 18 84 a 32 32 0 0 0 64 0 C 82 56 60 34 50 8 Z" fill="#2E9E44"/><path d="M50 22 C 42 44 27 60 27 84 a 23 23 0 0 0 46 0 C 73 60 58 44 50 22 Z" fill="#123021"/><path d="M50 30 C 44 48 33 62 33 84 a 17 17 0 0 0 34 0 C 67 62 56 48 50 30 Z" fill="#D8201F"/><path d="M50 60 C 46 70 35 78 35 90 a 15 15 0 0 0 30 0 C 65 78 54 70 50 60 Z" fill="#123021"/><path d="M50 64 C 47 73 38 80 38 90 a 12 12 0 0 0 24 0 C 62 80 53 73 50 64 Z" fill="#2F7FE0"/></svg></span> <span>GreenCity<b>Gas</b></span></div>
         <p style="margin-top:.6rem;max-width:34ch">Gas Safe registered plumbing &amp; heating in Milton Keynes.</p>
       </div>
       <div>
