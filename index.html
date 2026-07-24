@@ -42,6 +42,7 @@
   .btn-whatsapp:hover{background:#1db855}
   .wa-svg{width:1.15em;height:1.15em;vertical-align:-.18em;margin-right:.25em}
   .ph-svg{width:1.05em;height:1.05em;vertical-align:-.14em;margin-right:.4em}
+  .off-ico{width:1.05em;height:1.05em;position:relative;z-index:1}
 
   /* Header */
   header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
@@ -85,11 +86,9 @@
   .eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--green-light);color:var(--green-dark);font-weight:700;font-size:.85rem;padding:.4rem .8rem;border-radius:999px;margin-bottom:1rem}
   .hero h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:1rem}
   .hero h1 span{color:var(--green)}
-  .kw{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:kwshine 3s linear infinite;filter:drop-shadow(0 1px 4px rgba(0,0,0,.35))}
-  .kw-blue{background-image:repeating-linear-gradient(90deg,#3aa5ff 0,#c3e2ff 90px,#3aa5ff 180px)}
-  .kw-red{background-image:repeating-linear-gradient(90deg,#ff5a4c 0,#ffcbc3 90px,#ff5a4c 180px)}
-  .kw-green{background-image:repeating-linear-gradient(90deg,#2fbf6f 0,#c6f0d9 90px,#2fbf6f 180px)}
-  @keyframes kwshine{from{background-position:0 0}to{background-position:180px 0}}
+  .kw-blue{color:#5cb3ff!important;-webkit-text-fill-color:#5cb3ff!important}
+  .kw-red{color:#ff6f62!important;-webkit-text-fill-color:#ff6f62!important}
+  .kw-green{color:#57cf8b!important;-webkit-text-fill-color:#57cf8b!important}
   .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:34ch;margin-bottom:1.6rem}
   .hero-cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.4rem}
   .hero-note{font-size:.9rem;color:var(--muted)}
@@ -215,7 +214,7 @@
     </nav>
     <div class="nav-cta">
       <a href="tel:+447346813714" class="phone-top"><svg class="ph-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2Z"/></svg>07346 813714</a>
-      <a href="offers.html" class="btn btn-offers">Check Offers</a>
+      <a href="offers.html" class="btn btn-offers"><svg class="off-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4 12 22l-9-9V4h9l8.6 8.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Check Offers</a>
       <div class="creds">
         <img class="cred-logo" src="gas-safe-logo.png" alt="Gas Safe registered heating engineers in Milton Keynes">
       </div>
@@ -315,7 +314,6 @@
   <div class="wrap">
     <div class="sec-head">
       <h2>Covering Milton Keynes &amp; nearby</h2>
-      <p>Based locally and covering homes and landlords across the area. Not sure if we reach you? Just ask.</p>
     </div>
     <div class="mkmap-wrap">
       <div id="mkmap"></div>
