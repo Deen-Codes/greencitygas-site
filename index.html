@@ -197,7 +197,7 @@
 
   /* sticky mobile call bar */
   .callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:1200;display:none;gap:.5rem;padding:.5rem;background:rgba(16,105,68,.26);backdrop-filter:blur(24px) saturate(1.8);-webkit-backdrop-filter:blur(24px) saturate(1.8);border:1px solid rgba(255,255,255,.28);border-radius:26px;box-shadow:0 12px 34px rgba(0,0,0,.28)}
-  .callbar .btn{flex:1;justify-content:center;padding:.7rem}
+  .callbar .btn{flex:1;justify-content:center;padding:.7rem;box-shadow:none}
   @media(max-width:860px){.callbar{display:flex}footer{padding-bottom:104px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero .wrap{position:relative;min-height:56.4vw}.hero h1{position:absolute;top:.5rem;left:0;text-align:left;max-width:96%;font-size:clamp(1.35rem,6.1vw,2rem);line-height:1.08;margin:0;text-wrap:balance}.hero p.lead{position:absolute;bottom:.5rem;right:0;text-align:right;max-width:94%;font-size:clamp(.82rem,3.5vw,1rem);line-height:1.3;margin:0;text-wrap:balance}}
 </style>
 </head>
@@ -396,11 +396,12 @@
     var el = document.getElementById('mkmap');
     if (!el || typeof L === 'undefined') return;
     var mk = [52.0406, -0.7594];
-    var map = L.map('mkmap', {scrollWheelZoom:false}).setView(mk, 11);
+    var map = L.map('mkmap', {scrollWheelZoom:false, zoomControl:false, dragging:false, doubleClickZoom:false, boxZoom:false, keyboard:false, touchZoom:false, tap:false}).setView(mk, 11);
     map.attributionControl.setPrefix(false);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:18, attribution:'© OSM'}).addTo(map);
-    L.circle(mk, {radius:12000, color:'#0f7a4d', weight:2, fillColor:'#2E9E44', fillOpacity:0.14}).addTo(map);
+    var circ = L.circle(mk, {radius:12000, color:'#0f7a4d', weight:2, fillColor:'#2E9E44', fillOpacity:0.14}).addTo(map);
     L.circleMarker(mk, {radius:6, color:'#0a5a39', weight:2, fillColor:'#2E9E44', fillOpacity:1}).addTo(map);
+    map.fitBounds(circ.getBounds(), {padding:[16,16]});
   })();
   (function(){
     var peek=document.querySelector('.peek'), sec=document.getElementById('services');
