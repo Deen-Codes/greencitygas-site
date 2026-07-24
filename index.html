@@ -61,9 +61,9 @@
   @media(max-width:860px){.creds{gap:7px}.cred-logo{height:30px}}
   .brands{background:#ffffff;padding:2.2rem 0;border-bottom:1px solid var(--line)}
   .brands-title{text-align:center;color:var(--muted);font-weight:700;font-size:.92rem;letter-spacing:.02em;margin-bottom:1.4rem}
-  .brand-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.4rem 2.6rem}
-  .brand-row img{height:42px;width:auto;object-fit:contain}
-  @media(max-width:860px){.brand-row{gap:.9rem 1.3rem}.brand-row img{height:25px;max-width:30%;object-fit:contain}}
+  .brand-row{display:flex;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:1rem;padding:.4rem .3rem}
+  .brand-row img{height:auto;max-height:56px;max-width:18%;width:auto;object-fit:contain}
+  @media(max-width:860px){.brand-row{gap:.45rem}.brand-row img{max-height:34px;max-width:18%}}
   .btn-offers{position:relative;overflow:hidden;background:var(--amber);color:#3a2b00;font-weight:800;padding:.42rem 1rem;font-size:.92rem;animation:offerpulse 2.4s ease-in-out infinite}
   .btn-offers:hover{background:#eaa62a;transform:translateY(-1px)}
   .btn-offers::before{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:sheen 3.2s ease-in-out infinite;pointer-events:none}
@@ -195,7 +195,7 @@
   /* sticky mobile call bar */
   .callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:1200;display:none;gap:.5rem;padding:.5rem;background:rgba(16,105,68,.26);backdrop-filter:blur(24px) saturate(1.8);-webkit-backdrop-filter:blur(24px) saturate(1.8);border:1px solid rgba(255,255,255,.28);border-radius:26px;box-shadow:0 12px 34px rgba(0,0,0,.28)}
   .callbar .btn{flex:1;justify-content:center;padding:.7rem}
-  @media(max-width:860px){.callbar{display:flex}body{padding-bottom:76px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero .wrap{position:relative;min-height:56.4vw}.hero h1{position:absolute;top:.5rem;left:0;text-align:left;max-width:96%;font-size:clamp(1.35rem,6.1vw,2rem);line-height:1.08;margin:0;text-wrap:balance}.hero p.lead{position:absolute;bottom:.5rem;right:0;text-align:right;max-width:94%;font-size:clamp(.82rem,3.5vw,1rem);line-height:1.3;margin:0;text-wrap:balance}}
+  @media(max-width:860px){.callbar{display:flex}footer{padding-bottom:104px}.hero-cta{display:none!important}.hero .eyebrow{display:none}.hero .wrap{position:relative;min-height:56.4vw}.hero h1{position:absolute;top:.5rem;left:0;text-align:left;max-width:96%;font-size:clamp(1.35rem,6.1vw,2rem);line-height:1.08;margin:0;text-wrap:balance}.hero p.lead{position:absolute;bottom:.5rem;right:0;text-align:right;max-width:94%;font-size:clamp(.82rem,3.5vw,1rem);line-height:1.3;margin:0;text-wrap:balance}}
 </style>
 </head>
 <body>
@@ -286,7 +286,7 @@
 <section id="services">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="whyhead">Why pick Green City Gas?</h2>
+      <h2 class="whyhead">Why Green City Gas?</h2>
     </div>
     <p class="why-bio"><strong>Green City Gas is a family-run business</strong> serving Milton Keynes and the surrounding areas. We're Gas Safe registered, so every gas job is done legally, safely and to standard — and we turn up when we say we will, keep things tidy and explain the work in plain English, so you always know what you're paying for.</p>
     <div class="why-grid">
